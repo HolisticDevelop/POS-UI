@@ -5,7 +5,9 @@
 <mat-sidenav-container autosize>
   <mat-sidenav #sidenav opened="true" class="mat-elevation-z8" mode="side">
     <mat-list>
-      <mat-list-item *ngFor="let option of menuOptions">
+      <mat-list-item *ngFor="let option of menuOptions"
+                     [class.active]="selectedOption === option.label"
+                     (click)="onMenuOptionClick(option.label)">
         <a routerLink="{{option.route}}" class="w-100">
           <button mat-button class="menu-button">
             <mat-icon fontIcon="{{option.icon}}" class="me-2"></mat-icon>

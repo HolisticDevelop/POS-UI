@@ -44,3 +44,9 @@ mat-sidenav {
 mat-sidenav-container {
   height: calc(100vh - 65px);
 }
+
+
+/* Define the CSS class to change the color of the selected item */
+.mat-list-item.active {
+  background-color: #093786; /* Change to your desired color */
+}

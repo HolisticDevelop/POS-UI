@@ -10,6 +10,11 @@ const MENU_OPTIONS = [
     label: "Inventario",
     route: "product",
     icon: "inventory"
+  },
+  {
+    label: "Whatsapp",
+    route: "whatsapp",
+    icon: "whatsapp"
   }
 ]
 
@@ -20,11 +25,16 @@ const MENU_OPTIONS = [
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  selectedOption: string | null = null;
   menuOptions = MENU_OPTIONS;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onMenuOptionClick(option: string): void {
+    this.selectedOption = option;
   }
 
 }
